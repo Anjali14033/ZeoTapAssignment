@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rule Engine</title>
+</head>
+<body>
+    <h1>Rule Engine</h1>
+    <form id="rule-form">
+        <input type="text" id="rule-string" placeholder="Enter Rule (e.g., age > 30)" required>
+        <button type="submit">Create Rule</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('rule-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const ruleString = document.getElementById('rule-string').value;
+            const response = await fetch('/create_rule', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ rule_string: ruleString })
+            });
+            const result = await response.json();
+            document.getElementById('result').innerText = result.message;
+        });
+    </script>
+</body>
+</html>

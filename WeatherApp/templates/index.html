@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Weather Monitoring</title>
+</head>
+<body>
+    <h1>Real-Time Weather Monitoring</h1>
+    
+    <!-- Real-Time Weather Data Section -->
+    <div style="overflow-y: scroll; height:400px;" id="real-time-weather">
+        <h2>Real-Time Weather Data (Last Update)</h2>
+        {% for data in latest_weather_data %}
+        <div class="weather-card">
+            <h3>{{ data.city }}</h3>
+            <p>Temperature: {{ data.temperature }}°C</p>
+            <p>Feels Like: {{ data.feels_like }}°C</p>
+            <p>Condition: {{ data.condition }}</p>
+            <p>Last Updated: {{ data.timestamp }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Daily Weather Summary Section -->
+    <h2>Daily Summaries</h2>
+    <div style="overflow-y: scroll; height:400px;" id="real-time-weather"></div>
+        <div id="weather-summary">
+            {% for summary in summaries %}
+            <div class="summary-card">
+                <h3>{{ summary.city }} - {{ summary.date }}</h3>
+                <p>Average Temperature: {{ summary.avg_temp }}°C</p>
+                <p>Max Temperature: {{ summary.max_temp }}°C</p>
+                <p>Min Temperature: {{ summary.min_temp }}°C</p>
+                <p>Dominant Condition: {{ summary.dominant_condition }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
+
