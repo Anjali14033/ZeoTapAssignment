@@ -24,10 +24,10 @@ def daily_rollup():
         calculate_daily_summary()
 
 # Fetch weather data at set interval
-schedule.every(5).minutes.do(fetch_data)
+schedule.every(1).minutes.do(fetch_data)
 # Run daily summary calculation at midnight
 # schedule.every().day.at("00:00").do(daily_rollup)
-schedule.every(10).minutes.do(daily_rollup)
+schedule.every(1).minutes.do(daily_rollup)
 
 while True:
     schedule.run_pending()
