@@ -53,8 +53,8 @@ document.addEventListener('DOMContentLoaded', function() {
             .catch(error => console.error('Error fetching daily summary data:', error));
     }
 
-    // Fetch real-time weather data every 5 min (or adjust as needed)
-    setInterval(fetchWeatherData, 300000);
+    // Fetch real-time weather data every 1 min (or adjust as needed)
+    setInterval(fetchWeatherData, 60000);
     // Fetch the daily summary data once when the page loads
     fetchWeatherData();
     fetchDailySummary();
