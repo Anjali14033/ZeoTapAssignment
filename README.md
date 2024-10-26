@@ -5,5 +5,5 @@
   Inside both the folder you will see README.MD file in which I have added how to set-up the project dependencies and how to run and test the application.
 
   ### Note: For assignment 2: Real-Time Data Processing System for Weather Monitoring with Rollups and Aggregates
-    Once you run the application you need to wait for 5 minutes as the interval to fetch the data from weatherAPI is set as 5 minutes. If you want to quickly test the application you can
-    reduce the time to 1 minute. So, that after 1 minute the scheduler will call the OpenWeatherMap API (https://openweathermap.org/) and then it will show you the data on UI.
+  Once you run the application you need to wait for 5 minutes as the interval to fetch the data from weatherAPI is set as 5 minutes. If you want to quickly test the application you can
+  reduce the time to 1 minute. So, that after 1 minute the scheduler will call the OpenWeatherMap API (https://openweathermap.org/) and then it will show you the data on UI.
