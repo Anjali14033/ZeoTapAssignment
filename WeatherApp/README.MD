@@ -10,7 +10,7 @@ WeatherApp is a real-time weather monitoring application that retrieves and disp
 ## Setup and Installation
 
 1. **Navigate to the WeatherApp Directory**: 
-   - Open a terminal and change directory to where `WeatherApp` is located.
+   - Open a terminal and change the directory to where `WeatherApp` is located.
    ```bash
    cd path/to/WeatherApp
    ```
@@ -20,8 +20,8 @@ WeatherApp is a real-time weather monitoring application that retrieves and disp
     Copy code
     pip install -r requirements.txt
 3. **How to Run the Application**
-    Run the Flask Server:
 
+    Run the Flask Server:
     Start the application by running run.py.
     bash
     Copy code
