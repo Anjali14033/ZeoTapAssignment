@@ -16,24 +16,23 @@ WeatherApp is a real-time weather monitoring application that retrieves and disp
    ```
 2. **Install Dependencies:**
     Install all the required Python libraries from requirements.txt.
-    bash
-    Copy code
+    ```bash
     pip install -r requirements.txt
+    ```
 3. **How to Run the Application**
 
     Run the Flask Server:
     Start the application by running run.py.
-    bash
-    Copy code
+    ```bash
     python run.py
+    ```
     Execute Weather Fetching Script:
 
     In a new terminal, execute weather_fetcher.py to initiate data fetching from the weather API.
-    bash
-    Copy code
+    ```bash
     python weather_fetcher.py
+    ```
     Access the Application:
-
     Open a web browser and go to http://localhost:5000 to access the WeatherApp interface.
 4. **File Structure**
         WeatherApp/
